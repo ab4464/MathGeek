@@ -1,0 +1,135 @@
+body {
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    padding: 10px 5px;
+}
+
+.dopdown-menu {
+    background-color: white;
+}
+
+.main-img {
+    border: 1px solid black;
+    margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    padding: 15px 10px 0;
+    line-height: 25px;
+    text-indent: 25px;
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.panel-head {
+    color: black;
+    text-shadow: 1px 1px white;
+}
+
+.text-contrast {
+    color: black;
+    text-decoration: underline;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+
+.formula1 {
+    position: relative;
+    top: -29px;
+    left: 100px;
+    display: block;
+    align-items: baseline;
+    width: 200px;
+    height: 20px;
+    margin-left: -40px;
+    color: black;
+    text-align: center;
+}
+
+.formula {
+    position: relative;
+    top: -30px;
+    left: 100px;
+    display: block;
+    align-items: baseline;
+    width: 70px;
+    height: 25px;
+    margin-left: -40px;
+    color: black;
+    padding: 10px auto;
+}
+
+.formula-result {
+    position: relative;
+    display: inline-block;
+    top: -20px;
+    left: 50px;
+    width: 70px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+.top {
+    margin-top: 40px;
+}
+
+.explanation {
+    font-size: 20px;
+    color: black;
+    text-shadow: 1px 1px #fff;
+}
+
+.box {
+    background-color: darkseagreen;
+    margin: 5px 0 15px;
+    padding: 5px 5px 15px;
+    border-radius: 10px;
+}
+
+.white,
+table,
+table th {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.find {
+    width: 35px;
+    color: black;
+}
+
+.formula-box {
+    background-color: darkseagreen;
+    margin: 5px 0 15px;
+    padding: 8px 5px 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.questions {
+    color: black;
+}
+
+.modal-color {
+    background-color: darkseagreen;
+}
+
+.input-calculator {
+    width: 70px;
+}

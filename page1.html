@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MathGeeK/Probability Overview</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link href="style.css" rel="stylesheet" />
+    <script src='script.js'></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand">MathGeek</a>
+            </div>
+            <!-- end navbar-header-->
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown active">
+                        <!-- this is a dropdown menu-->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Probability<span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="page1.html">Basics of Probability</a></li>
+                            <li><a href="page2.html">Combinations and Permutations</a></li>
+                            <li role="separator" class="divider"></li>
+                            <!--horizontal breaking line-->
+                            <li><a href="page3.html">Exercises</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="img-responsive main-img" src="https://img.haikudeck.com/mg/02070E46-E652-4A08-9620-C6A1DA21AC23.jpg" width="100%" height="200px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Basics of Probability</h2>
+                <p>Even if you've never taken a Probability course before, you'd agree that we all have some basic knowledge about probability. Indeed, we use the term frequently to make estimations in our daily life. Expression like: <i>Do you know the probability that it rains today?</i> and <i>What are the chances that Mr. X is elected president?</i> make reference to the probability of certain outcome. </p>
+                <p> Therefore, whenever we are not sure about the outcome of a specific event, we use probabilities to estimate the likelihood of its occurence. We calculate the probability of certain event by measuring the ratio of the favorable cases to the whole number of cases possible. </p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h4 class="panel-head">In the following videos, you will be explained what is probability and go over an example: </h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-5">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" width="550" height="330" src="https://www.youtube.com/embed/uzkc-qNVoOk" frameborder="1" allowfullscreen> </iframe>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" width="550" height="330" src="https://www.youtube.com/embed/yUaI0JriZtY" frameborder="1" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Let's practice!</h3>
+            <h4><span class="glyphicon glyphicon-question-sign"></span> When we toss a coin, what is the probability of getting heads?</h4>
+            <p>As you can see, since the coin only has two sides (Heads or Tails), the chances of getting heads (P (H) = ?) equals to the number of ways H can happen over the total number of outcomes. If we apply this logic to our problem, then there is a 50/50 chances of getting heads.</p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-5">
+                <img class="img-responsive main-img" src="http://aristotle2digital.blogwyrm.com/wp-content/uploads/2016/02/Before-the-Flip.jpg" height="700px" width="450px">
+            </div>
+
+            <div class="col-sm-5">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4>Let's look at the formula:</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-8">
+                                <div>P (H) =</div>
+                                <input class="formula1" type="text" placeholder="# ways an event can happen" disabled>
+                                <input class="formula1" type="text" placeholder="total number of outcomes" disabled>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h4 class="text-contrast">Now let's try to solve the problem. </h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4"></div>
+                                <div class="col-xs-8">
+                                    <div>P (H) =</div>
+                                    <input class="formula" type="text" id="numerator" placeholder="ways" value="">
+                                    <input class="formula" type="text" id="denominator" placeholder="total" value="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4"></div>
+                                <div class="col-xs-4">
+                                    <div>P (H) =</div>
+                                    <input class="formula-result" type="text" id="probability" value="">
+                                </div>
+                                <div class="col-xs-2">
+                                    <span id="printPercentage"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-7"></div>
+                                <div class="col-sm-2">
+                                    <button class="btn btn-default" onclick="division();">Solve</button>
+                                </div>
+                                <div class="col-sm-2">
+                                    <button class="btn btn-default" onclick="resetDivision();">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>

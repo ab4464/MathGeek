@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MathGeeK/Permutations and Combinations</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link href="style.css" rel="stylesheet" />
+
+</head>
+
+<body onload='pageSetup();'>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand">MathGeek</a>
+            </div>
+            <!-- end navbar-header-->
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown active">
+                        <!-- this is a dropdown menu-->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Probability<span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="page1.html">Basics of Probability</a></li>
+                            <li><a href="page2.html">Combinations and Permutations</a></li>
+                            <li role="separator" class="divider"></li>
+                            <!--horizontal breaking line-->
+                            <li><a href="page3.html">Exercises</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#myModal" role="button" data-toggle="modal" id="myBtn"><span class="glyphicon glyphicon-modal-window"></span> Calculator</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <img class="img-responsive main-img top" src="https://spanish2learn.com/wp-content/uploads/2016/10/Practice-exercises-spanish-present-tense.png" width="100%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="page-header">Time to practice what we have learned!</h2>
+                <div class="well" id="quizSetup">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3 id="practice" class="questions"></h3>
+                            <!--items with JS-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10, col-xs-5"></div>
+                        <div class="col-sm-2">
+                            <input id="quiz-answer" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10, col-xs-10"></div>
+                        <div class="col-sm-2">
+                            <button id="next" onclick="nextQuestion();">Next &#10095</button>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog" aria-labelledby="calculator" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-color">
+                <div class="modal-header">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <h4 class="modal-title" id="calculator">Combination &amp; Permutation Calculator</h4>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                     <span aria-hidden="true">&times;</span>
+                                 </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <h4>Input the n and k value to calculate:</h4>
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-3">
+                            <span>n: </span><input id="n" class="input-calculator" value="" type="text">
+                        </div>
+                        <div class="col-sm-3">
+                            <span>k: </span><input id="k" class="input-calculator" value="" type="text">
+                        </div>
+                        <div class="col-sm-3">
+                            <span>Result: </span><input  id="calculResult" class="input-calculator" value="" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="getPermutation();">nPk</button>
+                    <button type="button" class="btn btn-primary" onclick="getCombination();">nCk</button>
+                    <button type="button" class="btn btn-secondary" onclick="clearField();">Clear</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src='script.js'></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    </script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

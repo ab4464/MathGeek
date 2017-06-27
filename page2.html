@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MathGeeK/Permutations and Combinations</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link href="style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand">MathGeek</a>
+            </div>
+            <!-- end navbar-header-->
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown active">
+                        <!-- this is a dropdown menu-->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Probability<span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="page1.html">Basics of Probability</a></li>
+                            <li><a href="page2.html">Combinations and Permutations</a></li>
+                            <li role="separator" class="divider"></li>
+                            <!--horizontal breaking line-->
+                            <li><a href="page3.html">Exercises</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#myModal" role="button" data-toggle="modal" id="myBtn"><span class="glyphicon glyphicon-modal-window"></span> Calculator</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <img class="img-responsive main-img top" src="https://i.ytimg.com/vi/uNS1QvDzCVw/maxresdefault.jpg" width="100%" height="40%">
+            </div>
+        </div>
+        <div class="well">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="page-header box">
+                        <h2>Permutations <small>Different ways of arranging <b>r</b> objects out of given <b>n</b> objects, in a particular order.</small></h2>
+                    </div>
+                    <ul class="explanation">
+                        <li>The order of people/objects matters.</li>
+                        <li>Represents arragement. </li>
+                        <li>Denoted <b>nPr</b>.</li>
+                    </ul>
+                    <img class="img-responsive main-img" src="http://www.math30.ca/lessons/permutationsAndCombinations/permutations/web/openingImage.jpg" width="550px">
+                </div>
+                <div class="col-sm-6">
+                    <div class="page-header box">
+                        <h2>Combinations <small>Grouping/selecting <b>r</b> objects out of <b>n</b> given objects, where order does not matter.</small></h2>
+                    </div>
+                    <ul class="explanation">
+                        <li>The order of people/objects does not matter.</li>
+                        <li>Represents grouping/selection.</li>
+                        <li>Denoted by <b>nCr</b></li>
+                    </ul>
+                    <img class="img-responsive main-img" src="http://www.math30.ca/lessons/permutationsAndCombinations/combinations/web/openingImage.jpg" width="550px;">
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Factorial Function (!)</h2>
+                <p>To calculate Permutation and Combinations, we must understand first what is a Factorial Function. To find the factorial of a number means to multiply a series of descending natural numbers, and it's represented with the symbol (!). Let's take a look of the formula: </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>n</th>
+                                <th>n!</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1!</td>
+                                <td>1 * 1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>2!</td>
+                                <td>2 * 1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>3!</td>
+                                <td>3 * 2 * 1</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>4!</td>
+                                <td>4 * 3 * 2 * 1</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td><input class="find" id="userInput" type="text" value=""> !</td>
+                                <td id="printProcess"><button class="btn btn-success btn-sm" onclick='getFactorialWithDisplay();'>Calculate</button></td>
+                                <td id="printResult"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <p>Take a look of the pattern. If you noticed, the factorial of any number is that number times the factorial of that number minus 1.</p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-6">
+                <p>Therefore we can represent it as follows:</p>
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-5">
+                        <div class="formula-box">n! = n * (n-1)!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <h3>Let's analize it through some examples:</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="img-responsive main-img" src="https://image.slidesharecdn.com/permutationcombination-140518051451-phpapp02/95/permutation-combination-7-638.jpg?cb=1400390482">
+            </div>
+            <div class="col-sm-6">
+                <img class="img-responsive main-img" src="http://images.slideplayer.com/2/759462/slides/slide_6.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog" aria-labelledby="calculator" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-color">
+                <div class="modal-header">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <h4 class="modal-title" id="calculator">Combination &amp; Permutation Calculator</h4>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                     <span aria-hidden="true">&times;</span>
+                                 </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <h4>Input the n and k value to calculate:</h4>
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-3">
+                            <span>n: </span><input class="input-calculator" id="n" type="text" value="">
+                        </div>
+                        <div class="col-sm-3">
+                            <span>k: </span><input class="input-calculator" id="k" value="" type="text">
+                        </div>
+                        <div class="col-sm-3">
+                            <span>Result: </span><input class="input-calculator" id="calculResult" value="" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="getPermutation();">nPk</button>
+                    <button type="button" class="btn btn-primary" onclick="getCombination();">nCk</button>
+                    <button type="button" class="btn btn-secondary" onclick="clearField();">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src='script.js'></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
